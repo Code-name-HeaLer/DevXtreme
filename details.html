@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details - DevXtreme Hackathon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+      .space-font {
+        font-family: "Space Mono", monospace;
+      }
+
+      .stars {
+        background: black;
+        background-image: radial-gradient(
+            white,
+            rgba(255, 255, 255, 0.2) 2px,
+            transparent 40px
+          ),
+          radial-gradient(
+            white,
+            rgba(255, 255, 255, 0.15) 1px,
+            transparent 30px
+          ),
+          radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px);
+        background-size: 550px 550px, 350px 350px, 250px 250px;
+        background-position: 0 0, 40px 60px, 130px 270px;
+      }
+
+      .text-glow {
+        text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+      }
+
+      .card-hover {
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-5px);
+        border-color: rgba(96, 165, 250, 0.8);
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white stars min-h-screen">
+    <!-- Navbar (same as index.html) -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="space-font text-2xl font-bold"
+            >DevXtreme</a
+          >
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html#about"
+              class="hover:text-blue-400 transition-colors mt-[7px]"
+              >About</a
+            >
+            <a href="details.html" class="text-blue-400 mt-[7px]">Details</a>
+
+            <a
+              href="https://forms.gle/YEF3dbepZJV62CdZ7"
+              class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full transition-colors"
+              >Register</a
+            >
+          </div>
+          <button class="md:hidden">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 px-4">
+      <div class="container mx-auto max-w-6xl">
+        <h1
+          class="space-font text-4xl md:text-5xl font-bold text-center mb-16 text-glow"
+        >
+          Mission Details
+        </h1>
+
+        <!-- Overview Section -->
+        <div
+          class="bg-blue-900/20 p-8 rounded-lg backdrop-blur-sm border border-blue-400/30 mb-12"
+        >
+          <h2 class="space-font text-2xl font-bold mb-6">Mission Overview</h2>
+          <p class="text-gray-300 text-lg mb-6">
+            DevXtreme is a high-intensity, one-day hackathon where teams develop
+            working prototypes while crafting compelling business and revenue
+            models. Like the brave explorers of Interstellar who ventured
+            through wormholes to save humanity, you'll push the boundaries of
+            innovation to solve real-world challenges.
+          </p>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-4 bg-black/50 rounded-lg">
+              <i class="fas fa-users text-3xl text-blue-400 mb-3"></i>
+              <h3 class="font-bold mb-2">Team Size</h3>
+              <p class="text-gray-300">3-5 Members</p>
+            </div>
+            <div class="text-center p-4 bg-black/50 rounded-lg">
+              <i class="fas fa-clock text-3xl text-blue-400 mb-3"></i>
+              <h3 class="font-bold mb-2">Duration</h3>
+              <p class="text-gray-300">8 Hours of Coding</p>
+            </div>
+            <div class="text-center p-4 bg-black/50 rounded-lg">
+              <i class="fas fa-trophy text-3xl text-blue-400 mb-3"></i>
+              <h3 class="font-bold mb-2">Prizes</h3>
+              <p class="text-gray-300">₹4,500 Prize Pool</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rounds Section -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Preliminary Round -->
+          <div
+            class="bg-blue-900/20 p-8 rounded-lg backdrop-blur-sm border border-blue-400/30 card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-file-alt text-2xl text-blue-400"></i>
+              </div>
+              <h3 class="space-font text-xl font-bold">Preliminary Round</h3>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Teams submit their abstract outlining their innovative solution.
+              Think of it as planning your trajectory before the space jump.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                <span>Problem statement analysis</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                <span>Initial solution concept</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                <span>Technical feasibility outline</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Development Round -->
+          <div
+            class="bg-blue-900/20 p-8 rounded-lg backdrop-blur-sm border border-blue-400/30 card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-code text-2xl text-blue-400"></i>
+              </div>
+              <h3 class="space-font text-xl font-bold">Development Round</h3>
+            </div>
+            <p class="text-gray-300 mb-4">
+              The main mission: transform your ideas into reality through
+              intense coding and development. Like navigating through space,
+              every minute counts.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                <span>Prototype development</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                <span>Business model creation</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                <span>Mentor guidance available</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Final Presentation -->
+          <div
+            class="md:col-span-2 bg-blue-900/20 p-8 rounded-lg backdrop-blur-sm border border-blue-400/30 card-hover"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-4"
+              >
+                <i
+                  class="fa-sharp fa-solid fa-person-chalkboard text-2xl text-blue-400"
+                ></i>
+              </div>
+              <h3 class="space-font text-xl font-bold">Final Presentation</h3>
+            </div>
+            <p class="text-gray-300 mb-4">
+              The culmination of your journey: present your innovation to our
+              panel of experts. Like transmitting vital data back to Earth, make
+              every second of your presentation count.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-black/30 p-4 rounded-lg">
+                <h4 class="font-bold mb-2 text-blue-400">
+                  Presentation Format
+                </h4>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                    <span>5-7 minute pitch</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                    <span>Live demo required</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                    <span>Q&A session with judges</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-black/30 p-4 rounded-lg">
+                <h4 class="font-bold mb-2 text-blue-400">Judging Criteria</h4>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                    <span>Technical Innovation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                    <span>Business Viability</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 mt-1 mr-2"></i>
+                    <span>Presentation Quality</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registration Section -->
+        <div class="text-center">
+          <a
+            href="#register"
+            class="inline-block px-8 py-3 bg-blue-500 hover:bg-blue-600 rounded-full transition-colors text-lg font-medium"
+          >
+            Begin Your Journey
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 py-8">
+      <div class="container mx-auto px-4">
+        <div class="text-center text-gray-400">
+          <p>© 2025 DevXtreme Hackathon. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle (same as index.html)
+      const menuButton = document.querySelector("nav button");
+      const mobileMenu = document.createElement("div");
+      mobileMenu.className = "fixed inset-0 bg-black/95 z-40 hidden";
+      mobileMenu.innerHTML = `
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <a href="index.html#about" class="text-xl hover:text-blue-400 transition-colors">About</a>
+                <a href="details.html" class="text-xl text-blue-400">Details</a>
+                <a href="https://forms.gle/YEF3dbepZJV62CdZ7" class="text-xl bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-full transition-colors">Register</a>
+            </div>
+        `;
+      document.body.appendChild(mobileMenu);
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
